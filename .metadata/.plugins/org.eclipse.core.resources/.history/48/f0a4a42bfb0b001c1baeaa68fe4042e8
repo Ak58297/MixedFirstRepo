@@ -1,0 +1,17 @@
+import java.util.HashMap;
+
+public class Hash_Map {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<Integer,String> hm= new HashMap<Integer,String> ();
+		hm.put(0, "zero");
+		hm.put(1, "First");
+		hm.put(2, "Second");
+		hm.put(1, "Third");
+		hm.put(4, "Fourth");
+		hm.put(5, "Fifth");
+		System.out.println(hm);
+	}
+
+}

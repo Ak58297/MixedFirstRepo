@@ -1,0 +1,20 @@
+package sorting;
+
+import java.io.*;
+import java.util.*;
+
+public class Test {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    
+    int n=5;
+        int sum=0;
+    int A[]={10,25,15,60,40};
+        for (int Arr: A)
+        {
+            sum=sum+Arr;
+        }
+        System.out.println(sum);
+    }
+}

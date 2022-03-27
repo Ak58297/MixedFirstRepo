@@ -1,0 +1,18 @@
+
+public class HumanClass {
+
+	
+	String name;
+	int age;
+	int height;
+	String job;
+	String character;
+	
+	public void IdentifyHuman()
+	{
+		System.out.println(age);
+		System.out.println(height);
+		System.out.println(job);
+		System.out.println(character);
+	}
+}

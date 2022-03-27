@@ -1,0 +1,30 @@
+
+public class HumanClass {
+
+	
+	String name;
+	int age;
+	int height;
+	String job;
+	String character;
+	
+	public HumanClass()
+	{
+		
+		System.out.println("I am in sonstructor for Humanclass");
+		/*System.out.println(name1);
+		System.out.println(age1);
+		System.out.println(height1);
+		System.out.println(job1);
+		System.out.println(character1);*/
+		
+	}
+	public void IdentifyHuman()
+	{
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(height);
+		System.out.println(job);
+		System.out.println(character);
+	}
+}

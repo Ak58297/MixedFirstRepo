@@ -1,0 +1,12 @@
+
+public class RunHumanClass {
+
+	public static void main(String[] args) {
+		
+		HumanClass ob =new HumanClass();
+		//ob.IdentifyHuman();
+		
+		
+			}
+
+}

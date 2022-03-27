@@ -1,0 +1,26 @@
+
+public class HumanClass {
+
+	
+	String name="Abhishek";
+	int age=26;
+	int height=5;
+	String job="TCS";
+	String character="Good" ;
+	public void Humanclass()
+	{
+		String name="Abhisek";
+		int age=26;
+		int height=5;
+		String job="TCS";
+		String character="Good" ;
+	}
+	public void IdentifyHuman()
+	{
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(height);
+		System.out.println(job);
+		System.out.println(character);
+	}
+}
