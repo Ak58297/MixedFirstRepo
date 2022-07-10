@@ -3,6 +3,7 @@ package selenium;
 import java.util.Arrays;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 
@@ -14,67 +15,46 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AddToCart {
 
+	//public static WebDriver driver;
+
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws InterruptedException {
 
-// TODO Auto-generated method stub
-
 		System.setProperty("webdriver.chrome.driver", "C:\\WORK\\chromedriver.exe");
-
 		WebDriver driver = new ChromeDriver();
 
-		String[] itemsNeeded = { "Cucumber", "Brocolli", "Beetroot" };
+		String itemsNeeded[] = { "Cucumber", "Brocolli", "Beetroot", "Tomato" };
+		driver.navigate().to("https://rahulshettyacademy.com/seleniumPractise");
 
-		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
-
-		Thread.sleep(3000);
-
-		addItems(driver, itemsNeeded);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		addItems(driver,itemsNeeded);
 
 	}
 
-	public static void addItems(WebDriver driver, String[] itemsNeeded)
-
-	{
-
+	public static void addItems(WebDriver driver,String itemsNeeded[]) {
 		int j = 0;
-
-		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
-
-		for (int i = 0; i < products.size(); i++)
-
-		{
+		List<WebElement> products = driver.findElements(By.xpath("//div[@class='product']/h4"));
+		for (int i = 0; i < products.size(); i++) {
 
 //Brocolli - 1 Kg
 
-//Brocolli,    1 kg
-
-			String[] name = products.get(i).getText().split("-");
-
-			String formattedName = name[0].trim();
+			String[] OnlyProductName = products.get(i).getText().split("-");// Brocolli , 1 Kg
+			String TrimmedProductName = OnlyProductName[0].trim();
 
 //format it to get actual vegetable name
-
 //convert array into array list for easy search
-
 //  check whether name you extracted is present in arrayList or not-
+			List<String> itemsNeededList = Arrays.asList(itemsNeeded);// covert Array into array list
 
-			List itemsNeededList = Arrays.asList(itemsNeeded);
-
-			if (itemsNeededList.contains(formattedName))
-
-			{
-
+			if (itemsNeededList.contains(TrimmedProductName)) {
 				j++;
 
 //click on Add to cart
 
 				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
-
 				if (j == itemsNeeded.length)
-
 				{
-
-					break;
+					break;// so when j==4 then this loop will end.
 
 				}
 

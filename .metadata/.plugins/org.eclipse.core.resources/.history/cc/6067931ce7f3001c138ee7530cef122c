@@ -1,0 +1,40 @@
+package javaBasics;
+
+public class SuperChildClass extends SuperParentClass
+{
+	int i=3;
+	public SuperChildClass()
+	{
+		super();
+		int i=7;
+		System.out.println("I am in child... constructor");
+		
+		System.out.println(this.i);
+	}
+
+	public void CommonMethod()
+	{
+		super.CommonMethod();//This line should be written above child functionality
+		System.out.println("I am in Child class method");
+	}
+	
+	String name="Child String";
+	
+	public void printString()
+	{
+	    
+		System.out.println(name);
+		System.out.println(super.name);
+	}
+	
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		SuperChildClass s=new SuperChildClass();
+		s.CommonMethod();
+		s.printString();
+       
+	}
+
+}

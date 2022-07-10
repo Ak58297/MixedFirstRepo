@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
+
+
 //import com.sun.tools.classfile.Opcode.Set;
 
 public class WindowHandling {
@@ -16,7 +18,7 @@ public class WindowHandling {
 	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "C:\\WORK\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ABHISHEK KUMAR\\Downloads\\chromedriver_99\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://www.wikipedia.org/");
 		driver.manage().timeouts().implicitlyWait(4,TimeUnit.SECONDS);
@@ -35,10 +37,11 @@ public class WindowHandling {
 		System.out.println(driver.findElement(By.xpath("//*[text()='Wikipedia']")).getText().split("p")[0].trim());
 		
 		
-		 
 		driver.switchTo().window(ParentWindow);
-		driver.quit();
-	
+		System.out.println(driver.getTitle());
+		
+		driver.close();
+		
 		
 		
 		

@@ -34,8 +34,7 @@ public class BrokenLinks {
 
 		// Java methods will call URL's and gets you the status code
 
-		// if status code >400 then that url is not working-> link which tied to url is
-		// broken
+		// if status code >400 then that url is not working-> link which tied to url is broken
 
 		// a[href*="soapui"]'
 

@@ -21,8 +21,11 @@ public class HeightAndWidth {
 		WebElement Name=driver.findElement(By.xpath("(//label)[1]"));
 		
 		System.out.println(Name.getRect().getDimension().getHeight());
-		System.out.println(Name.getRect().getDimension().getWidth());
+		
+		System.out.println(Name.getRect().width);
 		driver.close();
+		
+	
 
 
 	}

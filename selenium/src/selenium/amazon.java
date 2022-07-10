@@ -28,7 +28,7 @@ public class amazon {
 		System.out.println(driver.findElements(By.xpath("//*[@class='a-size-medium a-color-base a-text-normal']")).size());
 		
 		int c=driver.findElements(By.xpath("//*[@class='a-normal']")).size();
-		System.out.println(driver.findElements(By.xpath("//*[@class='a-normal']")).size()+1);
+		System.out.println(c+1);
 		
 		//WebElement check=driver.findElement(By.xpath("//*[@class='a-last']"));
 		int sum=0;

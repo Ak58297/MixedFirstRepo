@@ -10,24 +10,18 @@ public class method1
 	@AfterTest
 	public void daylast() 
 	{
-		
 		System.out.println("I will execute all the last of all the days");
-
 	}
 	@BeforeMethod
 	public void everymethod() 
 	{
-		
 		System.out.println("I will execute before every method in class( method 1)");
-
 	}
 	
 	@Test
 	public void day1() 
-	{
-		
+	{	
 		System.out.println("Monday");
-
 	}
 	
 	@Test
